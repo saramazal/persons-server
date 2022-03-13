@@ -1,5 +1,5 @@
 function getAll() {
-    axios.get('/person')
+    axios.get('/persons')
         .then(result => render(result.data))
 }
 getAll()
@@ -41,13 +41,13 @@ function getAllValues(form) {
 }
 
 function addPerson(values) {
-    axios.post('/person', values)
+    axios.post('/persons', values)
         .then(() => getAll())
 }
 
 async function deletePerson(id) {
     if (window.confirm(`Are you sure?`)) {
-        const result = await axios.delete(`/person/${id}`)
+        const result = await axios.delete(`/persons/${id}`)
         getAll()
     }
 }

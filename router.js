@@ -2,11 +2,11 @@ const Persons = require('./persons')
 
 module.exports = (app) => {
 
-    app.get('/person', (req, res) => {
+    app.get('/persons', (req, res) => {
         res.send(Persons.read(req.query))
     })
 
-    app.post('/person', (req, res) => {
+    app.post('/persons', (req, res) => {
         try {
             res.send(Persons.create(req.body))
         } catch (error) {
@@ -17,7 +17,7 @@ module.exports = (app) => {
         }
     })
 
-    app.put('/person/:id', (req, res) => {
+    app.put('/persons/:id', (req, res) => {
         //const body = req.body
         const {
             body,
@@ -33,7 +33,7 @@ module.exports = (app) => {
         }
     })
 
-    app.delete('/person/:id', (req, res) => {
+    app.delete('/persons/:id', (req, res) => {
         const {
             id
         } = req.params
