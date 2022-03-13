@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persons Server</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <h1>Persons</h1>
+    <div class="wrapper">
+
+      <div class="container">
+        <form id="form" class="form">
+          <h2 class="head">Add Person</h2>
+          <div class="form-control">
+            <div class="firstName">
+              <input name="firstName" type="text" placeholder="First Name">
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="firstName">
+              <input class="input-item" name="lastName" type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div>
+            <label class="color" id='color'>
+              Eyes color</label>
+            <input class="color-input" name="eyeColor" type="color" value="#96ded1">
+          </div>
+          <div class="form-control">
+            <div class="age">
+              <input class="input-item" name="age" type="number" placeholder="Age">
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="city">
+             <select class="form-control input-city" name='city'>
+              <option class="input-city">Jerusalem</option>
+                <option>Tel Aviv</option>
+                <option>Tokio</option>
+                <option>New York</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="submit" value="Add" class="button">
+
+        </form>
+      </div>
+
+      <div class="container">
+        <form id="form" class="form2">
+          <ul class="">
+            <h2 class="head">List</h2>
+
+            <div class="firstName" id='list'></div>
+          </ul>
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+</body>
+
+</html>
